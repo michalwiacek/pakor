@@ -1,0 +1,223 @@
+.home-wrap
+  display: flex
+  justify-content: flex-start
+  flex-direction: column
+  
+.home-sections
+  display: -webkit-box
+  display: -webkit-flex
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -webkit-flex-direction: row
+  -ms-flex-direction: row
+  flex-direction: row
+  min-height: 100vh
+  overflow: hidden
+.services-sections
+  display: flex
+  flex-direction: row
+  //min-height: 100vh      
+
+@media (max-width: 640px)
+  .home-sections .flex
+    display: block
+
+// Typography
+
+  h1
+    color: $accent-color
+    font-family: lato
+
+.home-lead
+  font-size: 36px
+  line-height: 1.1
+
+  &.outdented
+    text-indent: -0.75em
+
+    @media (max-width: 640px)
+      text-indent: 0
+
+//Button & Animation
+
+@keyframes moveInLeft
+  0%
+    opacity: 0
+    transform: translateX(-10rem)
+
+  80%
+    transform: translateX(1rem)
+
+  100%
+    opacity: 1
+    transform: translate(0)
+
+
+@keyframes moveInBottom
+  0%
+    opacity: 0
+    transform: translateY(3rem)
+
+  100%
+    opacity: 1
+    transform: translate(0)
+
+
+@keyframes moveInRight
+  0%
+    opacity: 0
+    transform: translateX(10rem)
+
+  80%
+    transform: translateX(-1rem)
+
+  100%
+    opacity: 1
+    transform: translate(0)
+
+
+.btn
+  &:link, &:visited
+    text-transform: uppercase
+    text-decoration: none
+    padding: .5rem 1rem
+    display: inline-block
+    //border: 1px solid white
+    transition: all .2s
+    position: relative
+    font-size: 1.6rem
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2)
+  &:active
+    outline: none
+    transform: translateY(-1px)
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2)
+
+.btn-white
+  background-color: #fff
+  color: #777
+.btn-default
+  background-color: $bg-color
+  color: $accent-color
+.btn-yellow
+  background-color: $accent-color
+  color: $bg-color
+
+.btn::after
+  content: ""
+  display: inline-block
+  height: 100%
+  width: 100%
+  border-radius: 10rem
+  position: absolute
+  top: 0
+  left: 0
+  z-index: -1
+  transform: all .4s
+
+.btn-white::after
+  background-color: #fff
+
+.btn:hover::after
+  transform: scaleY(1.6) scaleX(1.4)
+  opacity: 0
+
+.btn-animated
+  animation: moveInBottom .5s ease-out .75s
+  animation-fill-mode: backwards
+
+.clipped
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 15% 100%, 0 90%, 0 0)
+  clip-path: polygon(100% 0, 100% 100%, 15% 100%, 0 90%, 0 0)
+
+
+//pulse animation
+
+.pulse
+  margin: 100px
+  display: block
+  cursor: pointer
+  box-shadow: 0 0 0 rgba(252, 4, 24, 0.4)
+  animation: pulse 2s infinite
+  &:hover
+    animation: none
+
+@-webkit-keyframes pulse
+  0%
+    -webkit-box-shadow: 0 0 0 0 rgba(252, 4, 24, 0.4)
+
+  70%
+    -webkit-box-shadow: 0 0 0 10px rgba(252, 4, 24, 0)
+
+  100%
+    -webkit-box-shadow: 0 0 0 0 rgba(252, 4, 24, 0)
+
+
+@keyframes pulse
+  0%
+    -moz-box-shadow: 0 0 0 0 rgba(252, 4, 24, 0.4)
+    box-shadow: 0 0 0 0 rgba(252, 4, 24, 0.4)
+
+  70%
+    -moz-box-shadow: 0 0 0 10px rgba(252, 4, 24, 0)
+    box-shadow: 0 0 0 10px rgba(252, 4, 24, 0)
+
+  100%
+    -moz-box-shadow: 0 0 0 0 rgba(252, 4, 24, 0)
+    box-shadow: 0 0 0 0 rgba(252, 4, 24, 0)
+
+@keyframes zoomInDown
+  from
+    opacity: 0
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0)
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+
+  60%
+    opacity: 1
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0)
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1)
+
+
+.zoomInDown
+  animation: zoomInDown 1s
+
+
+.slideInRightUp
+  animation: slideInRightUp 1s
+
+@keyframes slideInRightUp
+  from
+    transform: translate3d(1000%, -1000%, 0)
+    visibility: visible
+
+  to
+    transform: translate3d(0, 0, 0)
+
+
+@keyframes slideInLeftUp
+  from
+    transform: translate3d(-1000%, -1000%, 0)
+    visibility: visible
+
+  to
+    transform: translate3d(0, 0, 0)
+
+
+.slideInLeftUp
+  animation: slideInLeftUp 1s
+
+@media (max-width: 640px)
+  .home-wrap
+    align-content: flex-end
+  .home-sections
+    display: block
+    //flex-direction: column
+    min-height: 100vh
+    //flex-direction: column
+    //flex-wrap: wrap
+  .section
+    width: 100vw
+    margin: 0
+    overflow: hidden

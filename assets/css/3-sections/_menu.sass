@@ -1,0 +1,72 @@
+.menu
+  position: fixed
+  margin: 2em auto 0 2em
+  //background-color: #ddb91f
+  background-color: $accent-color
+  width: 66px
+  border: 1px solid #333
+  border-radius: 0px
+  transition: 0.3s border-radius ease-in-out, 0.3s height ease-in-out
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  z-index: 100
+
+.menu--closed
+  height: 66px
+
+.menu--open
+  height: 400px
+
+.button
+  transition: 0.3s transform ease-in-out, 0.3s opacity ease-in-out
+  cursor: pointer
+  position: absolute
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  width: 2em
+  height: 2em
+  left: 27%
+  top: 20px
+  opacity: 1
+  &:hover
+    opacity: 0.6
+  span
+    width: 100%
+    height: 4px
+    background-color: #333
+    border-radius: 20%
+
+.menu--open .button
+  transform-origin: center
+  transform: rotate(90deg)
+
+.tools
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  align-items: center
+  height: 60%
+  justify-content: space-between
+  transition: 0.3s margin ease-in-out
+  .icon
+    transition: 0.2s transform ease-in-out
+    &:hover
+      transform: scale(0.8)
+
+.tools--hidden
+  margin-top: 400px
+  z-index: -100
+
+.tools--visible
+  margin-top: 40%
+  z-index: 100
+
+@media (max-width: 640px)
+  .menu
+    position: absolute
+    right: 0
+    margin: 2em 2em auto auto

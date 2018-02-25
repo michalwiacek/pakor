@@ -1,0 +1,59 @@
+section.about
+  display: -webkit-box
+  display: -webkit-flex
+  display: -ms-flexbox
+  display: flex
+  flex-direction: column
+  /*-webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;*/
+  /*margin-top: 2em;*/
+  align-items: flex-start
+  justify-content: flex-start
+  /*this in the flex-item that we want scrollable*/
+  height: auto
+  //align-self: flex-start
+  right: 0
+  margin: 2em 2em auto 15em
+  padding: 2em
+  //border: 10px solid #333
+  border-radius: 3px
+  background-attachment: fixed
+  background-size: cover
+  background: linear-gradient(to right bottom, rgba($accent-color, .7), rgba($accent2-color, .7))
+  z-index: 1
+  width: 50%
+  overflow: auto
+
+  h2
+    color: #3f3f42
+    font:
+      size: 50px
+      weight: 400
+    line-height: 0.4
+    padding: 0
+    margin-top: 30px
+    margin-right: -108px
+  p
+    font-size: 1rem
+  .btn
+    margin-right: 2em
+    align-self: flex-end
+    
+@media (max-width: 900px)
+  section.about
+    width: 70%
+    margin: 2em
+@media (max-width: 640px)
+  section.about
+    flex-flow: column wrap
+    justify-content: flex-start
+    align-content: flex-start
+    width: 100vw
+    margin: 0
+    min-height: 400px
+    h2
+      margin: 0 auto 0.4em 0
+    .home-lead
+      width: 85vw
+      
