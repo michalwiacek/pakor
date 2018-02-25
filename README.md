@@ -1,6 +1,6 @@
-#New site for pakor.pl
+# New site for pakor.pl
 
-##used:
+## used:
 * jekyll
 * gulp
 * sass
