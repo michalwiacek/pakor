@@ -591,15 +591,15 @@ body {
     opacity: 0.6; }
   .button span {
     width: 100%;
-    height: 4px;
+    height: 2px;
     background-color: #333;
     border-radius: 20%; }
 
 .menu--open .button {
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg); }
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); }
 
 .tools {
   display: -ms-flexbox;
@@ -668,8 +668,10 @@ section.header {
     width: 100%;
     height: 100%;
     background-image: url(/assets/img/pattern2.png);
-    background-color: rgba(51, 51, 51, 0.1);
+    background-color: rgba(41, 51, 92, 0.7);
     z-index: -1; }
+  section.header .stopfade {
+    opacity: .5; }
   section.header .logo {
     display: -ms-flexbox;
     display: flex;
@@ -681,19 +683,41 @@ section.header {
         align-content: center;
     margin-top: 25em;
     margin-left: 45%; }
+    section.header .logo:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
     section.header .logo .gigantic {
       color: #e7a61a;
       font-weight: 800;
       background: #333333;
       padding: 1px 20px 1px 20px;
       margin: 0 auto -15px auto; }
+      section.header .logo .gigantic:hover {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
     section.header .logo .home-lead {
       color: #E4572E;
       font-size: 40px;
       background: #333333;
       padding: 1px;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      z-index: 1; }
+      section.header .logo .home-lead:hover {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
+  section.header #pause button {
+    display: block;
+    width: 80%;
+    padding: .4rem;
+    border: none;
+    margin: 1rem auto;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.23);
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s background; }
 
 @media (max-width: 900px) {
   section.header {
@@ -771,7 +795,11 @@ section.about {
     section.about h2 {
       margin: 0 auto 0.4em 0; }
     section.about .home-lead {
-      width: 85vw; } }
+      width: 85vw; }
+    section.about .btn {
+      font-size: 1rem; }
+      section.about .btn::after {
+        height: auto; } }
 
 section.map {
   display: -ms-flexbox;
@@ -779,7 +807,8 @@ section.map {
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  height: 100vh; }
   section.map h2 {
     margin-left: 3em;
     visibility: hidden;
@@ -800,7 +829,8 @@ section.services {
       justify-content: center;
   background-color: #23404C;
   z-index: 5;
-  width: 100vw; }
+  width: 100vw;
+  min-height: 100vh; }
   section.services .card {
     background: #1b313b;
     width: 48vh;
@@ -810,12 +840,15 @@ section.services {
     -ms-flex-direction: column;
         flex-direction: column;
     border-radius: 5px;
-    margin: 5vh;
+    margin: 3em;
     padding: 0;
     -webkit-filter: drop-shadow(15px 15px 20px #162830);
             filter: drop-shadow(15px 15px 20px #162830);
     -webkit-transition: 0.3s ease-in-out !important;
     -webkit-transition-transition: 0.2s ease-in-out !important; }
+    section.services .card:hover {
+      -webkit-transform: scale(1.03);
+              transform: scale(1.03); }
   section.services .card-img {
     -ms-flex-item-align: center;
         align-self: center;
@@ -837,14 +870,15 @@ section.services {
 
 @media (max-width: 640px) {
   section.services {
-    -ms-flex-flow: column wrap;
-        flex-flow: column wrap;
-    position: center;
+    display: block;
     width: 100vw; }
     section.services .card {
       max-height: 100vh;
       width: 100vw;
-      margin: 1rem 0 1rem 0; }
+      margin: auto; }
+      section.services .card:hover {
+        -webkit-transform: scale(1);
+                transform: scale(1); }
     section.services .card-btn {
       font-size: 1rem; }
       section.services .card-btn::after {

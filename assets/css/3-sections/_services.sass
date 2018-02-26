@@ -5,6 +5,7 @@ section.services
   background-color: $japanese-indigo
   z-index: 5
   width: 100vw
+  min-height: 100vh
   
   .card
     background: darken($japanese-indigo, 5%) 
@@ -13,12 +14,13 @@ section.services
     display: flex
     flex-direction: column
     border-radius: 5px
-    margin: 5vh
+    margin: 3em
     padding: 0
     filter: drop-shadow(15px 15px 20px darken($japanese-indigo, 8%) )
     -webkit-transition: 0.3s ease-in-out !important
     -webkit-transition-transition: 0.2s ease-in-out !important
-    
+    &:hover
+      transform: scale(1.03)
   
   .card-img
     align-self: center
@@ -41,14 +43,17 @@ section.services
 
 @media (max-width: 640px)
   section.services
-    flex-flow: column wrap
-    position: center
+    display: block
+    //flex-flow: column
+    //position: center
     width: 100vw
     
     .card
       max-height: 100vh
       width: 100vw
-      margin: 1rem 0 1rem 0
+      margin: auto
+      &:hover
+        transform: scale(1)
     
     .card-btn
       font-size: 1rem
