@@ -546,6 +546,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+.flex {
+  display: -ms-flexbox;
+  display: flex; }
+
 .menu {
   position: fixed;
   margin: 2em auto 0 2em;
@@ -636,8 +640,6 @@ body {
     margin: 2em 2em auto auto; } }
 
 section.header {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-item-align: start;
@@ -682,19 +684,17 @@ section.header {
     -ms-flex-line-pack: center;
         align-content: center;
     margin-top: 25em;
-    margin-left: 45%; }
+    margin-left: 45%;
+    transition: all .3s ease-in-out; }
     section.header .logo:hover {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1); }
+      -webkit-transform: scale(0.93);
+              transform: scale(0.93); }
     section.header .logo .gigantic {
       color: #e7a61a;
       font-weight: 800;
       background: #333333;
       padding: 1px 20px 1px 20px;
       margin: 0 auto -15px auto; }
-      section.header .logo .gigantic:hover {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1); }
     section.header .logo .home-lead {
       color: #E4572E;
       font-size: 40px;
@@ -703,9 +703,6 @@ section.header {
       margin-left: auto;
       margin-right: auto;
       z-index: 1; }
-      section.header .logo .home-lead:hover {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1); }
   section.header #pause button {
     display: block;
     width: 80%;
@@ -737,8 +734,6 @@ section.header {
       max-width: 300px; } }
 
 section.about {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   /*-webkit-flex-direction: column;
@@ -802,8 +797,6 @@ section.about {
         height: auto; } }
 
 section.map {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: center;
@@ -813,16 +806,18 @@ section.map {
     margin-left: 3em;
     visibility: hidden;
     backgorund: #333333; }
+  section.map .wrap-map {
+    margin: auto 6em; }
 
 @media (max-width: 663px) {
+  section.map .wrap-map {
+    margin: auto 0; }
   section.map h2 {
     display: none;
     font-size: 1.6rem;
     margin-left: 0.5em; } }
 
 section.services {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
   -ms-flex-pack: center;
@@ -834,21 +829,20 @@ section.services {
   section.services .card {
     background: #1b313b;
     width: 48vh;
-    min-height: 45vh;
-    display: -ms-flexbox;
-    display: flex;
+    min-height: 55vh;
+    max-height: 70vh;
     -ms-flex-direction: column;
         flex-direction: column;
     border-radius: 5px;
-    margin: 3em;
+    margin: auto 3em;
     padding: 0;
     -webkit-filter: drop-shadow(15px 15px 20px #162830);
             filter: drop-shadow(15px 15px 20px #162830);
     -webkit-transition: 0.3s ease-in-out !important;
     -webkit-transition-transition: 0.2s ease-in-out !important; }
     section.services .card:hover {
-      -webkit-transform: scale(1.03);
-              transform: scale(1.03); }
+      -webkit-transform: scale(1.04);
+              transform: scale(1.04); }
   section.services .card-img {
     -ms-flex-item-align: center;
         align-self: center;
@@ -882,6 +876,111 @@ section.services {
     section.services .card-btn {
       font-size: 1rem; }
       section.services .card-btn::after {
+        height: auto; } }
+
+section.contact {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  /*-webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;*/
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  /*this in the flex-item that we want scrollable*/
+  height: auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 2em auto;
+  border-radius: 3px;
+  background-attachment: fixed;
+  background-size: cover;
+  background: linear-gradient(to right bottom, rgba(231, 166, 26, 0.8), rgba(228, 87, 46, 0.7));
+  z-index: 1;
+  min-width: 50%;
+  overflow: auto; }
+  section.contact p {
+    font-size: 1.1rem; }
+  section.contact .btn {
+    margin: auto 1rem 1rem auto;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+
+#contact {
+  width: 100%;
+  outline: none;
+  border: none; }
+  #contact input:focus {
+    border-color: transparent !important; }
+  #contact input::-webkit-input-placeholder, #contact input:-moz-placeholder, #contact input::-moz-placeholder, #contact input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8); }
+  #contact textarea {
+    outline: none;
+    border: none; }
+    #contact textarea input:focus {
+      border-color: transparent !important; }
+    #contact textarea input::-webkit-input-placeholder, #contact textarea input:-moz-placeholder, #contact textarea input::-moz-placeholder, #contact textarea input:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.8); }
+  #contact h3 {
+    color: #F96;
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    margin: 1em auto auto 1em; }
+  #contact h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px; }
+  #contact fieldset {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+    margin-bottom: 27px; }
+  #contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #0CF;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px; }
+    #contact button[type="submit"]:hover {
+      background: #09C;
+      transition: background-color 0.3s ease-in-out; }
+    #contact button[type="submit"]:active {
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+  #contact input:focus, #contact textarea:focus {
+    outline: 0;
+    border: 1px solid #999; }
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
+  color: #888; }
+
+@media (max-width: 900px) {
+  section.contact {
+    width: 70%;
+    margin: 2em; } }
+
+@media (max-width: 640px) {
+  section.contact {
+    -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    width: 100vw;
+    margin: 0;
+    min-height: 400px; }
+    section.contact h3 {
+      margin: 0 auto 0.4em 0; }
+    section.contact .home-lead {
+      width: 85vw; }
+    section.contact .btn {
+      font-size: 1rem; }
+      section.contact .btn::after {
         height: auto; } }
 
 .home-wrap {

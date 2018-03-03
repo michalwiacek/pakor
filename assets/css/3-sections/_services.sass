@@ -1,5 +1,4 @@
 section.services
-  display: flex
   flex-flow: row wrap
   justify-content: center
   background-color: $japanese-indigo
@@ -10,17 +9,17 @@ section.services
   .card
     background: darken($japanese-indigo, 5%) 
     width: 48vh
-    min-height: 45vh
-    display: flex
+    min-height: 55vh
+    max-height: 70vh
     flex-direction: column
     border-radius: 5px
-    margin: 3em
+    margin: auto 3em
     padding: 0
     filter: drop-shadow(15px 15px 20px darken($japanese-indigo, 8%) )
     -webkit-transition: 0.3s ease-in-out !important
     -webkit-transition-transition: 0.2s ease-in-out !important
     &:hover
-      transform: scale(1.03)
+      transform: scale(1.04)
   
   .card-img
     align-self: center
@@ -31,7 +30,6 @@ section.services
 
   .card-header
     margin-left: 1rem
-     
     margin: 1rem
   .card-lead
     clear: right

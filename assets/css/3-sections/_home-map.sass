@@ -1,5 +1,4 @@
 section.map
-  display: flex
   flex-direction: column
   justify-content: center
   height: 100vh
@@ -7,9 +6,12 @@ section.map
     margin-left: 3em
     visibility: hidden
     backgorund: $bg-color
-
+  .wrap-map
+    margin: auto 6em
 @media (max-width: 663px)
   section.map
+    .wrap-map
+      margin: auto 0
     h2
       display: none
       font-size: 1.6rem

@@ -1,23 +1,16 @@
-section.contact#contact
+section.contact.flex.clipped
 
-block content
-  .main.conainer
-    .row
-      .col-md-6.col-md-offset-3
-        h1.display-4.m-b-2 Zapraszamy do kontaktu
+  h3 Zapraszamy do kontaktu
 
-        // form
-        form(method='POST' action='/sendmessage')
-          div.form-group
-            label(for='name') Imie i Nazwisko:
-            input#name.form-control(type='text', placeholder='Imię i Nazwisko' name='name')
-          div.form-group
-            label(for='email') Email:
-            input#email.form-control(type='email', placeholder='name@email.com' name='email')
-          div.form-group
-            label(for='favoriteBook') Temat:
-            input#subject.form-control(type='text', placeholder='temat' name='subject')
-          div.form-group
-            label(for='message') Wiadomośc:
-            input#message.form-control(type='text', placeholder='tresc wiadomosci' name='message')
-          button.btn.btn-primary(type='submit') Wyślij
+  // form
+  form#contact(method='post' action='')
+    fieldset
+      input#name(type='text', placeholder='imię i nazwisko' name='name')
+    fieldset
+      input#email(type='email', placeholder='email' name='email')
+    fieldset
+      input#subject(type='text', placeholder='temat' name='subject')
+    fieldset
+      textarea#message(name="message", placeholder='treść wiadomości', cols='30', rows='10')
+    fieldset  
+      button(type='submit') Wyślij
