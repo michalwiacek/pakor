@@ -697,7 +697,7 @@ section.header {
       margin: 0 auto -15px auto; }
     section.header .logo .home-lead {
       color: #E4572E;
-      font-size: 40px;
+      font-size: 2.6rem;
       background: #333333;
       padding: 1px;
       margin-left: auto;
@@ -758,11 +758,11 @@ section.about {
   overflow: auto; }
   section.about h2 {
     color: #3f3f42;
-    font-size: 50px;
+    font-size: 2.4rem;
     font-weight: 400;
     line-height: 0.4;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 2rem;
     margin-right: -108px; }
   section.about p {
     font-size: 1.1rem; }
@@ -861,6 +861,7 @@ section.services {
     object-fit: scale-down;
     top: 0; }
   section.services .card-header {
+    font-size: 1.6rem;
     margin-left: 1rem;
     margin: 1rem; }
   section.services .card-lead {
@@ -868,6 +869,7 @@ section.services {
     margin: 0 1rem 0rem 1rem;
     color: #999; }
   section.services .card-btn {
+    font-size: 1.3rem;
     margin: auto 1rem 1rem auto;
     -ms-flex-item-align: end;
         align-self: flex-end; }
@@ -908,10 +910,10 @@ section.contact {
     -webkit-transition: 0.3s ease-in-out !important;
     -webkit-transition-transition: 0.2s ease-in-out !important; }
   section.contact h2 {
-    font-size: 20px; }
+    font-size: 1.3rem; }
   section.contact p {
     margin: 1rem;
-    font-size: 16px;
+    font-size: 1rem;
     color: #e7a61a; }
   section.contact form {
     border-top: 1px solid #dd8b00;
@@ -920,7 +922,7 @@ section.contact {
     border: none;
     position: relative; }
   section.contact input {
-    font-size: 16px;
+    font-size: 1rem;
     color: #dd8b00;
     display: block;
     width: 100%;
@@ -949,7 +951,7 @@ section.contact {
   section.contact input:focus ~ .bar:before, section.contact input:focus ~ .bar:after, section.contact textarea:focus ~ .bar:before, section.contact textarea:focus ~ .bar:after {
     width: 100%; }
   section.contact textarea {
-    font-size: 16px;
+    font-size: 1rem;
     color: #dd8b00;
     display: block;
     width: 100%;
@@ -960,12 +962,19 @@ section.contact {
     section.contact textarea:focus {
       outline: none; }
   section.contact button {
+    font-family: Lato;
+    font-size: 1.3rem;
+    color: #23404C;
     width: 100%;
     margin: 0;
     padding: 1em;
     background: #dd8b00;
     border: none;
-    border-radius: 5px; }
+    border-radius: 5px;
+    cursor: pointer; }
+    section.contact button:hover {
+      background: #29335C;
+      color: white; }
 
 @media (max-width: 663px) {
   section.contact {
@@ -1011,7 +1020,7 @@ section.contact {
     display: block; } }
 
 .home-lead {
-  font-size: 36px;
+  font-size: 2.4px;
   line-height: 1.1; }
   .home-lead.outdented {
     text-indent: -0.75em; }

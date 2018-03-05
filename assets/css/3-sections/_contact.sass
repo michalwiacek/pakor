@@ -14,10 +14,10 @@ section.contact
     -webkit-transition: 0.3s ease-in-out !important
     -webkit-transition-transition: 0.2s ease-in-out !important
   h2
-    font-size: 20px
+    font-size: 1.3rem
   p
     margin: 1rem
-    font-size: 16px
+    font-size: 1rem
     color: $accent-color
   form
     border-top: 1px solid $accent2-color
@@ -26,7 +26,7 @@ section.contact
     border: none
     position: relative
   input
-    font-size: 16px
+    font-size: 1rem
     color: $accent2-color
     display: block
     width: 100%
@@ -57,7 +57,7 @@ section.contact
     &:before, &:after
       width: 100%
   textarea
-    font-size: 16px
+    font-size: 1rem
     color: $accent2-color
     display: block
     width: 100%
@@ -68,12 +68,19 @@ section.contact
     &:focus
       outline: none
   button
+    font-family: Lato
+    font-size: 1.3rem
+    color: $japanese-indigo
     width: 100%
     margin: 0
     padding: 1em
     background: $accent2-color
     border: none
     border-radius: 5px
+    cursor: pointer
+    &:hover
+      background: $deep-koamaru
+      color: white
 @media (max-width: 663px)
   section.contact
     width: 100vw
