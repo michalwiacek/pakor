@@ -809,7 +809,12 @@ section.map {
     backgorund: #333333; }
   section.map .wrap-map {
     margin: 0;
-    height: 80vh; }
+    height: 80vh;
+    padding: 5px;
+    -webkit-filter: drop-shadow(15px 15px 20px #162830);
+            filter: drop-shadow(15px 15px 20px #162830);
+    -webkit-transition: 0.3s ease-in-out !important;
+    -webkit-transition-transition: 0.2s ease-in-out !important; }
 
 @media (max-width: 663px) {
   section.map {
@@ -827,7 +832,7 @@ section.services {
       flex-flow: row wrap;
   -ms-flex-pack: center;
       justify-content: center;
-  background-color: #23404C;
+  background-color: #1e3742;
   z-index: 5;
   width: 100vw;
   min-height: 100vh; }
@@ -904,6 +909,10 @@ section.contact {
     -webkit-transition-transition: 0.2s ease-in-out !important; }
   section.contact h2 {
     font-size: 20px; }
+  section.contact p {
+    margin: 1rem;
+    font-size: 16px;
+    color: #e7a61a; }
   section.contact form {
     border-top: 1px solid #dd8b00;
     border-bottom: 1px solid #dd8b00; }
@@ -992,7 +1001,8 @@ section.contact {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: row;
-      flex-wrap: row; }
+      flex-wrap: row;
+  background: #1e3742; }
 
 @media (max-width: 640px) {
   .home-sections {
