@@ -1,16 +1,22 @@
-section.contact.flex.clipped
-
-  h3 Zapraszamy do kontaktu
-
-  // form
-  form#contact(method='post' action='')
-    fieldset
-      input#name(type='text', placeholder='imię i nazwisko' name='name')
-    fieldset
-      input#email(type='email', placeholder='email' name='email')
-    fieldset
-      input#subject(type='text', placeholder='temat' name='subject')
-    fieldset
-      textarea#message(name="message", placeholder='treść wiadomości', cols='30', rows='10')
-    fieldset  
-      button(type='submit') Wyślij
+section.contact.flex
+  .wrap-contact.flex
+    h2 Zapraszamy do kontaktu
+    form#contact(method='post' action='')
+      fieldset
+        input#name(type='text', placeholder='imię i nazwisko' name='name')
+        span.highlight
+        span.bar
+      fieldset
+        input#email(type='email', placeholder='email' name='email')
+        span.highlight
+        span.bar
+      fieldset
+        input#subject(type='text', placeholder='temat' name='subject')
+        span.highlight
+        span.bar
+      fieldset
+        textarea#message(name="message", placeholder='treść wiadomości', cols='30', rows='10')
+        span.highlight
+        span.bar
+      fieldset  
+        button(type='submit') Wyślij
