@@ -1,7 +1,7 @@
 section.contact.flex
   .wrap-contact.flex
     h2 Zapraszamy do kontaktu
-    form#contact(method='post' action='')
+    form#contact(action='https://formspree.io/biuro@pakor.pl', method='POST')
       fieldset
         input#name(type='text', placeholder='imię i nazwisko' name='name')
         span.highlight
@@ -11,14 +11,14 @@ section.contact.flex
         span.highlight
         span.bar
       fieldset
-        input#subject(type='text', placeholder='temat' name='subject')
+        input#subject(type='text', placeholder='temat' name='_subject')
         span.highlight
         span.bar
       fieldset
-        textarea#message(name="message", placeholder='treść wiadomości', cols='30', rows='10')
+        textarea#message(name="message", placeholder='treść wiadomości', cols='20', rows='5')
         span.highlight
         span.bar
-      fieldset  
+      fieldset
         button(type='submit') Wyślij
 
     p telefon: +48 502 295 237

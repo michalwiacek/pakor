@@ -134,6 +134,23 @@
 .btn-animated
   animation: moveInBottom .5s ease-out .75s
   animation-fill-mode: backwards
+button
+  font-family: Lato
+  font-size: 1.3rem
+  color: $japanese-indigo
+  width: 100%
+  margin: 0
+  padding: 1em
+  background: $accent2-color
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  &:hover
+    background: $deep-koamaru
+    color: $accent2-color
+button
+  &:active
+    background: darken($deep-koamaru, 10%)
 
 .clipped
   -webkit-clip-path: polygon(100% 0, 100% 100%, 15% 100%, 0 90%, 0 0)

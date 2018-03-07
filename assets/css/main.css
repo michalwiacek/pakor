@@ -670,7 +670,7 @@ section.header {
     width: 100%;
     height: 100%;
     background-image: url(/assets/img/pattern2.png);
-    background-color: rgba(41, 51, 92, 0.7);
+    background-color: rgba(153, 153, 153, 0.4);
     z-index: -1; }
   section.header .stopfade {
     opacity: .5; }
@@ -685,7 +685,8 @@ section.header {
         align-content: center;
     margin-top: 25em;
     margin-left: 45%;
-    transition: all .3s ease-in-out; }
+    transition: all .3s ease-in-out;
+    cursor: pointer; }
     section.header .logo:hover {
       -webkit-transform: scale(0.93);
               transform: scale(0.93); }
@@ -726,7 +727,10 @@ section.header {
   section.header {
     min-height: 400px; }
     section.header .logo {
-      margin-bottom: 10em; }
+      margin-bottom: 13em;
+      margin-rigth: 2em; }
+    section.header .gigantic {
+      font-size: 80px; }
     section.header h2,
     section.header .home-lead {
       margin-left: auto;
@@ -766,10 +770,16 @@ section.about {
     margin-right: -108px; }
   section.about p {
     font-size: 1.1rem; }
-  section.about .btn {
-    margin: auto 1rem 1rem auto;
+  section.about a {
+    margin: auto 1em 0 auto;
     -ms-flex-item-align: end;
         align-self: flex-end; }
+  section.about h3 {
+    color: #3f3f42;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0; }
 
 @media (max-width: 900px) {
   section.about {
@@ -787,6 +797,8 @@ section.about {
     width: 100vw;
     margin: 0;
     min-height: 400px; }
+    section.about a {
+      margin: auto 3em 0 auto; }
     section.about h2 {
       margin: 0 auto 0.4em 0; }
     section.about .home-lead {
@@ -844,15 +856,15 @@ section.services {
     -ms-flex-direction: column;
         flex-direction: column;
     border-radius: 5px;
-    margin: auto 3em;
+    margin: 2em 3em;
     padding: 0;
     -webkit-filter: drop-shadow(15px 15px 20px #162830);
             filter: drop-shadow(15px 15px 20px #162830);
     -webkit-transition: 0.3s ease-in-out !important;
     -webkit-transition-transition: 0.2s ease-in-out !important; }
     section.services .card:hover {
-      -webkit-transform: scale(1.04);
-              transform: scale(1.04); }
+      -webkit-transform: scale(1.01);
+              transform: scale(1.01); }
   section.services .card-img {
     -ms-flex-item-align: center;
         align-self: center;
@@ -873,6 +885,10 @@ section.services {
     margin: auto 1rem 1rem auto;
     -ms-flex-item-align: end;
         align-self: flex-end; }
+  section.services a {
+    margin: auto 1rem 1rem auto;
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
 
 @media (max-width: 640px) {
   section.services {
@@ -881,7 +897,7 @@ section.services {
     section.services .card {
       max-height: 100vh;
       width: 100vw;
-      margin: auto; }
+      margin: 2em auto; }
       section.services .card:hover {
         -webkit-transform: scale(1);
                 transform: scale(1); }
@@ -961,20 +977,6 @@ section.contact {
     background: none; }
     section.contact textarea:focus {
       outline: none; }
-  section.contact button {
-    font-family: Lato;
-    font-size: 1.3rem;
-    color: #23404C;
-    width: 100%;
-    margin: 0;
-    padding: 1em;
-    background: #dd8b00;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; }
-    section.contact button:hover {
-      background: #29335C;
-      color: white; }
 
 @media (max-width: 663px) {
   section.contact {
@@ -982,6 +984,7 @@ section.contact {
     height: 100vh;
     margin: 0; }
     section.contact .wrap-contact {
+      height: 100%;
       margin: auto 0; } }
 
 .home-wrap {
@@ -1159,6 +1162,24 @@ section.contact {
           animation: moveInBottom .5s ease-out .75s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards; }
+
+button {
+  font-family: Lato;
+  font-size: 1.3rem;
+  color: #23404C;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  background: #dd8b00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; }
+  button:hover {
+    background: #29335C;
+    color: #dd8b00; }
+
+button:active {
+  background: #191f39; }
 
 .clipped {
   -webkit-clip-path: polygon(100% 0, 100% 100%, 15% 100%, 0 90%, 0 0);
